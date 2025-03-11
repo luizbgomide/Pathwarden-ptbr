@@ -1,0 +1,16 @@
+[book]
+authors = ["Raven Haunts", "Luiz Borges"]
+language = "pt-BR"
+multilingual = false
+src = "src"
+title = "Pathwarden (pt-br)"
+
+[build]
+build-dir = "docs/"
+
+[output.html.fold]
+enable = true
+
+[output.html.search]
+enable = true
+use-boolean-and = true
