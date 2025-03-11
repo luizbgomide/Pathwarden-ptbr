@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Criação de Personagem - Pathwarden (pt-br)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Pathwarden (pt-br)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="criação-de-personagem"><a class="header" href="#criação-de-personagem">Criação de Personagem</a></h1>
+<p>Você cria seu personagem em oito etapas:</p>
+<ol>
+<li>Perguntas (p. XX)</li>
+<li>Objetivos (p. XX)</li>
+<li>Básicos (p. XX)</li>
+<li>Proficiências (p. XX)</li>
+<li>Antecedentes (p. XX)</li>
+<li>Pontos de Caminho (p. XX)</li>
+<li>Talentos e Bênçãos (p. XX)</li>
+<li>Equipamento (p. XX)</li>
+</ol>
+<blockquote>
+<h3 id="conceito-do-personagem"><a class="header" href="#conceito-do-personagem">Conceito do Personagem</a></h3>
+<p>Ao criar um personagem, você deve começar com uma ideia simples e empolgante.</p>
+<p><em>Isso pode ser um nobre arrogante, um ladrão humilde ou uma aprendiz de bruxa curiosa; qualquer coisa que você possa imaginar em um mundo de fantasia.</em></p>
+<p>Ter um conceito em mente, mesmo que simples, ajudará a guiar o resto do processo de criação.</p>
+</blockquote>
+<h2 id="1-perguntas"><a class="header" href="#1-perguntas">1. Perguntas</a></h2>
+<p>Para iniciar o processo de criação do personagem, responda a pelo menos três das seguintes perguntas:</p>
+<ul>
+<li>Qual é a coisa mais perigosa que você já fez?</li>
+<li>Você tem um mentor? O que ele te ensinou?</li>
+<li>Qual é sua formação acadêmica?</li>
+<li>Você tem experiência em combate?</li>
+<li>Você já salvou alguém?</li>
+<li>Você já colocou alguém em perigo?</li>
+<li>O que você pensa sobre magia?</li>
+<li>Como era sua vida em casa antes disso?</li>
+<li>Você é especialmente talentoso em alguma coisa?</li>
+</ul>
+<h2 id="2-objetivos"><a class="header" href="#2-objetivos">2. Objetivos</a></h2>
+<p>O Objetivo do seu personagem é a razão pela qual ele se aventura. Ele deve ser uma força motriz para o personagem, surgindo frequentemente no jogo,  tanto para o Guardião da História (GH) quanto para você!</p>
+<p>Seu Objetivo pode variar de “Vou encontrar e matar o assassino do meu pai” e “Preciso me reunir com meu amor” até “Quero encontrar a espada lendária”.</p>
+<p>A característica mais importante de um Objetivo é que ele empurre o personagem para frente. Objetivos que não exigem viagens podem ir contra os temas do jogo e criar conflitos com outros PJs. “Quero montar uma loja” não funciona se você planeja ficar na cidade fazendo contratos comerciais, mas funciona se isso te levar a aventurar para juntar dinheiro.</p>
+<h2 id="3-básicos"><a class="header" href="#3-básicos">3. Básicos</a></h2>
+<p>Seu personagem começa com alguns atributos básicos:</p>
+<ul>
+<li><strong>Pontos de Vida (PV):</strong> 11. Isso aumenta com seu Nível, Características e Caminho de Combate.</li>
+<li><strong>Velocidade:</strong> 9 metros.</li>
+<li><strong>Tamanho:</strong> Os personagens são, por padrão, <strong>Médios</strong> ou <strong>Pequenos</strong>.</li>
+</ul>
+<h2 id="4-proficiências-e-características-de-caminho"><a class="header" href="#4-proficiências-e-características-de-caminho">4. Proficiências e Características de Caminho</a></h2>
+<p>Seu personagem tem seis <strong>Proficiências</strong>, relacionadas a <strong>Defesas</strong> e <strong>Caminhos</strong>:</p>
+<ul>
+<li>Escolha duas das seguintes <strong>Defesas</strong>: <strong>Fortitude</strong>, <strong>Vontade</strong>, <strong>Percepção</strong>. Marque elas como <strong>Treinado (+2)</strong>.</li>
+<li>Você é automaticamente <strong>Treinado (+2)</strong> nas Proficiências <strong>Combate</strong> e <strong>Perícias</strong>.</li>
+<li>Você ganha duas <strong>Perícias Marcadas</strong> de sua escolha.</li>
+<li>Você ganha uma Perícia de Saber (p. XX) de sua escolha.</li>
+</ul>
+<p>Seu <strong>Modificador</strong> é igual ao seu Nível + o grau de Proficiência — se você for Treinado ou melhor. Se você for <strong>Destreinado</strong>, seu modificador de Proficiência é metade do seu Nível (arredondado para baixo).</p>
+<p>O <strong>Valor de Defesa</strong> das suas Defesas é igual ao seu Modificador + 10.</p>
+<h2 id="5-antecedente"><a class="header" href="#5-antecedente">5. Antecedente</a></h2>
+<p>Os mundos de Pathwarden podem ter elfos, anões, fadas e outras criaturas de natureza fantástica. Entre eles, também há humanos. Você é um habitante de um mundo mágico e sua criação e ancestralidade lhe concederam algumas <strong>Características</strong> especiais.</p>
+<p>Você ganha duas <strong>Características de Antecedente</strong>. Defina qualquer tipo de ancestralidade especial que você possa ter, bem como habilidades relacionadas a ela. Um anão pode ser <strong>Robusto</strong> por natureza, um elfo pode ser <strong>Ágil</strong>, um meio-dragão pode ter <strong>Resistência</strong> a dano de <strong>Fogo</strong>.</p>
+<p>As Características de Antecedente podem ser naturais ou adquiridas, mas precisam fazer sentido considerando o histórico geral do seu personagem. Personagens humanos, por exemplo, provavelmente ganham <strong>Perícias</strong> e <strong>Talentos</strong>, em vez de Características mais fantásticas.</p>
+<h3 id="características-de-antecedente"><a class="header" href="#características-de-antecedente">Características de Antecedente</a></h3>
+<ul>
+<li><strong>Ágil:</strong> Aumente sua Velocidade em 1,5 metro.</li>
+<li><strong>Arma Natural:</strong> Você pode usar uma parte do corpo como uma arma natural. Ela ganha um dado de dano de 1d6 e dois Traços de Arma (p. XX) de sua escolha.</li>
+<li><strong>Carregador:</strong> Você pode carregar um item <strong>Pesado</strong> adicional.</li>
+<li><strong>Cauda:</strong> Ganhe uma cauda preênsil que pode ser usada de várias formas, como segurar um objeto leve ou interagir com o ambiente.</li>
+<li><strong>Construto:</strong> Você é um construto não vivo. Não precisa comer, beber, dormir ou respirar.</li>
+<li><strong>Corajoso:</strong> Quando estiver <strong>Assustado</strong>, reduza o valor da Condição em 1.</li>
+<li><strong>Mágico:</strong> Você ganha uma <strong>Magia Treinada</strong> de sua escolha. Você pode <strong>Conjurá-la</strong> como uma <strong>Ação Heroica</strong>.</li>
+<li><strong>Metamorfose:</strong> Escolha um animal. Você pode se transformar nesse animal ou em uma forma híbrida que tenha as habilidades desse animal. Use suas próprias <strong>Estatísticas</strong> para essa forma.</li>
+<li><strong>Morto-Vivo:</strong> Você é <strong>Imune</strong> a dano <strong>Sombrio</strong>, mas ganha <strong>Fraqueza</strong> 5 a dano <strong>Sagrado</strong>. Você não precisa comer, beber, dormir ou respirar.</li>
+<li><strong>Perícia:</strong> Você marca uma Perícia de sua escolha.</li>
+<li><strong>Resistência:</strong> Ganhe <strong>Resistência</strong> 5 a Dano de <strong>Fogo</strong>, <strong>Mágico</strong>, <strong>Sagrado</strong> ou <strong>Sombrio</strong>.</li>
+<li><strong>Robusto:</strong> Você não fica lento por nenhum <strong>Equipamento</strong> que carregar. Sua Velocidade base é 7,5 metros.</li>
+<li><strong>Sortudo:</strong> Você ganha um segundo Ponto de Heroísmo no início de cada sessão.</li>
+<li><strong>Talento</strong>: Ganhe um <strong>Talento</strong> adicional.</li>
+<li><strong>Visão no Escuro:</strong> Você sofre apenas uma penalidade de circunstância de -2 no escuro (p. XX).</li>
+<li><strong>Bônus:</strong> Crie suas próprias Características de Antecedente para espécies personalizadas!</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02-setting-up-a-campaign.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02-setting-up-a-campaign.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
