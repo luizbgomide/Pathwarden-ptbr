@@ -7,6 +7,10 @@ title = "Pathwarden (pt-br)"
 
 [build]
 build-dir = "docs/"
+create-missing = false
+
+[output.html]
+smart-punctuation = true
 
 [output.html.fold]
 enable = true
