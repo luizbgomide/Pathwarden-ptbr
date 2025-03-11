@@ -92,3 +92,98 @@ As Características de Antecedente podem ser naturais ou adquiridas, mas precisa
 - **Talento**: Ganhe um **Talento** adicional.
 - **Visão no Escuro:** Você sofre apenas uma penalidade de circunstância de -2 no escuro (p. XX).
 - **Bônus:** Crie suas próprias Características de Antecedente para espécies personalizadas!
+
+## 6. Pontos de Caminho
+
+Você ganha quatro **Pontos de Caminho** para distribuir entre os **Caminhos** de **Combate**, **Magia** e **Perícias**. Para cada ponto gasto, você ganha Características e habilidades conforme descrito na progressão do Caminho escolhido:
+
+- **Caminho de Combate (p. XX)** é para aqueles que lutam com armas como espadas, arcos e armas de fogo. Ao investir no Caminho de Combate, seus **Pontos de Vida** aumentam, seus **Golpes** causam mais dano, e sua **proficiência** no uso de armas melhora. Você também pode ganhar acesso a armas mais poderosas e habilidades especiais relacionadas a elas.
+- **Caminho de Magia (p. XX)** Para aqueles que se aventuram na arte da magia, lançando Magias e lutando por meio das artes arcanas. Ao investir no Caminho de Magia, você ganha **proficiência** em Magia, permitindo conjurar Magias. Você terá acesso a magias mais amplas e poderosas, mais recursos para conjurar e habilidades mágicas especiais.
+- **Caminho de Pericias (p. XX)** Para aqueles que desejam explorar várias áreas e não apenas uma. Isso representa sua especialidade em diversas habilidades, que são menos voltadas para o confronto direto. Desde força física (Força) e conhecimento médico (Medicina) até furtividade e subterfúgio (Malandragem), ou mesmo compreensão de magia (Arcanismo). Ao investir no Caminho de Perícias, você marca mais **Perícias** para usar e ganha habilidades especiais relacionadas a elas.
+
+## 7. Benefícios e Talentos
+
+Ao distribuir pontos nos Caminhos, você ganha **Talentos**. Talentos são habilidades menores, vinculadas aos respectivos Caminhos, que permitem fazer coisas que você normalmente não poderia ou que dão uma vantagem em certas situações.
+
+Sua progressão nos Caminhos concede **Benefícios** desse Caminho (**Estilos de Combate**, **Disciplinas Mágicas**, **Especializações em Perícias**). Cada Benefício concede uma habilidade e permite escolher Talentos relacionados a ela.
+
+## 8. Equipamento
+
+Seu personagem começa com um **Kit de Aventura (p. XX)** e **Roupas de Viagem** gratuitamente.
+
+O equipamento inicial do seu personagem equivale a 10 peças de ouro (100 peças de prata).
+
+Você pode ver os diversos equipamentos disponíveis para compra no **Capítulo de Equipamentos (p. XX)**.
+
+_Recomenda-se que cada personagem leve pelo menos uma arma para se proteger, e que conjuradores levem um **Foco (p. XX)**._
+
+<blockquote>
+
+## Verificação Final
+
+Seu personagem de 1º Nível deve ter:
+
+- 4 Proficiências no nível Treinado (+2), nenhuma no nível Especialista (+4) ou Mestre (+6). Seus modificadores para elas devem ser +3 ou +0.
+- Suas Defesas devem ser 13 ou 10.
+- 4 Pontos de Caminho distribuídos entre Combate, Magia e Habilidades.
+- 3 Talentos de sua escolha.
+- 3 a 4 Benefícios.
+- Pontos de Vida (PV): 11 ou mais.
+- Armas Simples Marcadas, pelo menos 2 Perícias e 1 Perícia de Saber.
+- Duas Características de Antecedente.
+- Equipamento ou moeda no valor total de 10 po.
+
+</blockquote>
+
+## Em Níveis Superiores
+
+Este capítulo ajudou você a criar um personagem de 1º Nível. Conforme você avança em suas aventuras, completando missões e alcançando objetivos, seu Nível aumentará. Ao ganhar um Nível, consulte a lista abaixo:
+
+1. 4 Pontos de Caminho, Básicos, 2 Defesas, 3 Talentos.
+1. 1 Ponto de Caminho, +1 PV, Talento, Perícia Marcada.
+1. 1 Ponto de Caminho, +1 PV, Talento, Especialidade, Melhoria de Defesa.
+1. 1 Ponto de Caminho, +1 PV, Talento.
+1. 1 Ponto de Caminho, +1 PV, Talento, Melhoria de Defesa.
+1. 1 Ponto de Caminho, +1 PV, Talento, Perícia Marcada.
+1. 1 Ponto de Caminho, +1 PV, Talento, Maestria, Melhoria de Defesa.
+1. 1 Ponto de Caminho, +1 PV, Talento.
+1. 1 Ponto de Caminho, +1 PV, Talento, Melhoria de Defesa.
+1. 1 Ponto de Caminho, +1 PV, Talento, Perícia Marcada.
+
+### Talento
+
+No 1º Nível, você ganha três Talentos. Em cada Nível seguinte, você ganha um Talento adicional.
+
+Você pode escolher Talentos Gerais ou Talentos de qualquer Estilo, Disciplina ou Perícia que você obtiver dos seus Caminhos.
+
+### Perícias Marcadas
+
+Você ganha Perícias Marcadas adicionais no 2º, 6º e 10º Níveis.
+
+Perícias Marcadas recebem seu bônus de Proficiência ao serem usadas e podem ser escolhidas com Especializações em Perícias.
+
+### Melhorias de Proficiência
+
+No 3º Nível, você se torna um Especialista em um Caminho. O Caminho no qual você investiu mais pontos se torna Especialista (+4). Se mais de um Caminho for elegível, escolha um deles.
+
+No 7º Nível e além, você se torna um Mestre em um Caminho. O Caminho no qual você investiu mais pontos se torna Mestre (+6), e qualquer Caminho com pelo menos 4 pontos investidos se torna Especialista (+4).
+
+Se você **Retreinar** e redistribuir seus Pontos de Caminho posteriormente, você pode alterar em qual Caminho é Especialista ou Mestre.
+
+### Melhorias de Defesa
+
+No 3º Nível, e a cada dois Níveis depois disso, você ganha uma **Melhoria de Defesa**, permitindo aumentar o **grau de Proficiência** de uma de suas **Defesas** (**Fortitude**, **Percepção** ou **Vontade**) em um.
+
+Você só pode melhorar uma Defesa até o nível de Mestre (+6), que só pode ser alcançado no 7º Nível ou superior.
+
+<blockquote>
+
+## Personagens de Níveis Mais Altos
+
+Ao criar um personagem de Nível mais alto, além dos benefícios obtidos com os Níveis, ele também deve ter mais dinheiro e equipamentos mágicos.
+
+- **No 3º Nível:** Pelo menos um Artefato e 50 po em equipamentos.
+- **No 7º Nível:** Pelo menos dois Artefatos e 100 po em equipamentos.
+- **No 10º Nível:** Pelo menos três Artefatos e 200 po em equipamentos.
+
+</blockquote>
